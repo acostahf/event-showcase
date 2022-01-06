@@ -1,3 +1,5 @@
+import { data } from "autoprefixer";
+
 const LiItem = (props) => (
   <li className="flex space-x-2">
     <div>
@@ -21,24 +23,25 @@ const LiItem = (props) => (
   </li>
 );
 
-export default () => (
-  <div>
-    <div className="text-center md:text-left md:flex max-w-3xl mx-auto mt-24">
-      <h1 className="font-bold text-6xl leading-tight">Events</h1>
+export default function Events(evnts) {
+  console.log(evnts);
+  return (
+    <div>
+      <div className="text-center md:text-left md:flex max-w-3xl mx-auto mt-24">
+        <h1 className="font-bold text-6xl leading-tight">Events</h1>
+      </div>
+      <div className=" text-center md:text-left max-w-3xl mx-auto mt-5">
+        <ul className=" space-y-4 items-center">
+          {evnts.events.map((evnt, i) => (
+            <LiItem
+              key={i}
+              when={evnt.when}
+              where={evnt.where}
+              what={evnt.what}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
-    <div className=" text-center md:text-left max-w-3xl mx-auto mt-5">
-      <ul className=" space-y-4 items-center">
-        <LiItem
-          when="tuesday"
-          where="Austin, Tx"
-          what="$2 fronzen margaritas. 8 flavors. Available drive-thru, to-go and dine-in."
-        />
-        <LiItem
-          when="tuesday"
-          where="Austin, Tx"
-          what="$2 fronzen margaritas. 8 flavors. Available drive-thru, to-go and dine-in."
-        />
-      </ul>
-    </div>
-  </div>
-);
+  );
+}
