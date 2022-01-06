@@ -9,7 +9,7 @@ const NavItem = (props) => (
   </li>
 );
 
-export default () => (
+const navbar = () => (
   <div>
     <nav className="flex justify-between py-4 px-3">
       <div className="flex items-center ">
@@ -26,3 +26,5 @@ export default () => (
     </nav>
   </div>
 );
+
+export default navbar;
