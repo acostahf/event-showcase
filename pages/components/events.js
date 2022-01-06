@@ -1,5 +1,3 @@
-import { data } from "autoprefixer";
-
 const LiItem = (props) => (
   <li className="flex space-x-2">
     <div>
