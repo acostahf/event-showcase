@@ -22,7 +22,7 @@ const LiItem = (props) => (
 );
 
 export default function Events(evnts) {
-  console.log(evnts);
+  // console.log(evnts);
   return (
     <div>
       <div className="text-center md:text-left md:flex max-w-3xl mx-auto mt-24">

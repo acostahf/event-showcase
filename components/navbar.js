@@ -18,9 +18,9 @@ const navbar = () => (
       </div>
       <div>
         <ul className="flex space-x-2">
-          <NavItem href="/events" text="Events" />
-          <NavItem href="/about" text="About" />
-          <NavItem href="/contact" text="Contact" />
+          <NavItem href="/" text="Events" />
+          <NavItem href="/" text="About" />
+          <NavItem href="/" text="Contact" />
         </ul>
       </div>
     </nav>
