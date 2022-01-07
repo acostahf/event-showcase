@@ -1,8 +1,8 @@
-import Events from "./components/events";
-import Navbar from "./components/navbar";
+import Events from "./../components/events";
+import Navbar from "./../components/navbar";
 import { gql } from "@apollo/client";
 import client from "../apolloClient";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function home({ evnts }) {
   // console.log(evnts);
