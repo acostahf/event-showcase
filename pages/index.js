@@ -16,18 +16,22 @@ export default function home({ evnts }) {
 
 export async function getStaticProps() {
   const data = "";
-  const { data: evnts } = await client.query({
-    query: gql`
-      query {
-        events {
-          id
-          what
-          where
-          when
+  const { data: evnts } = await client
+    .query({
+      query: gql`
+        query {
+          events {
+            id
+            what
+            where
+            when
+          }
         }
-      }
-    `,
-  });
+      `,
+    })
+    .catch((err) => {
+      return { data: "There was an error!" };
+    });
   // console.log(evnts);
   return {
     props: {
