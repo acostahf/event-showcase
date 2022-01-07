@@ -15,6 +15,7 @@ export default function home({ evnts }) {
 }
 
 export async function getStaticProps() {
+  const data = "";
   const { data: evnts } = await client.query({
     query: gql`
       query {
